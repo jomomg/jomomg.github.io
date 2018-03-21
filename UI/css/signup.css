@@ -1,0 +1,12 @@
+.signup-form {
+    position: relative;
+    margin: 2.5em auto 5em auto;
+    vertical-align: middle;
+    width: 50%;
+    padding: 5px;
+}
+
+h5 {
+  margin-left: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--jquery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+
+  </head>
+  <body>
+
+    <!--navbar-->
+    <nav>
+      <div class="nav-wrapper teal">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">All books</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container">
+
+      <h5>All books</h5>
+
+      <div class="row">
+
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img class="circle" src="images/covers/american-gods.jpg">
+          <div id="book-info">
+            <span class="title">American Gods</span>
+            <p>Neil Gaiman</p>
+            <p>Book ID: <span id="book-id">879</span></p>
+            <p>Publisher: <span id="publisher">William Morrow</p>
+            <p>Date: <span id="date">2001</p>
+            <p>Edition: <span id="editon">1</p>
+            <p>Category: <span id="category">Fiction</p>
+            <p>Sub-category: <span id="subcategory">Fantasy</p>
+          </div>
+          <ul class="secondary-content">
+            <li>
+              <a href="edit.html" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+              <a class="btn-floating btn waves-effect waves-light red modal-trigger" data-target="delete-modal"><i class="material-icons">delete</i></a>
+            </li>
+          </ul>
+       </li>
+
+       <li class="collection-item avatar">
+         <img class="circle" src="images/covers/bone-clocks.jpg">
+         <span class="title">Bone Clocks</span>
+         <p>David Mitchell</p>
+         <p>Book ID: <span id="123">123</span></p>
+         <ul class="secondary-content">
+           <li>
+             <a class="disabled btn-floating btn waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+             <a class="btn-floating btn waves-effect waves-light red modal-trigger" data-target="delete-modal"><i class="material-icons">delete</i></a>
+           </li>
+         </ul>
+       </li>
+
+       <li class="collection-item avatar">
+         <img class="circle" src="images/covers/hitchhikers.jpg">
+         <span class="title">Hitchhiker's Guide</span>
+         <p>Douglas Adams</p>
+         <p>Book ID: <span id="254">254</span></p>
+         <ul class="secondary-content">
+           <li>
+             <a class="disabled btn-floating btn waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+             <a class="btn-floating btn waves-effect waves-light red modal-trigger" data-target="delete-modal"><i class="material-icons">delete</i></a>
+           </li>
+         </ul>
+       </li>
+
+       <li class="collection-item avatar">
+         <img class="circle" src="images/covers/the-silkworm.jpg">
+         <span class="title">The Silkworm</span>
+         <p>Robert Galbraith</p>
+         <p>Book ID: <span id="139">139</span></p>
+         <ul class="secondary-content">
+           <li>
+             <a class="disabled btn-floating btn waves-effect waves-light blue"><i class="material-icons">edit</i></a>
+             <a class="btn-floating btn waves-effect waves-light red modal-trigger" data-target="delete-modal"><i class="material-icons">delete</i></a>
+           </li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+
+    <!--delete modal-->
+    <div id="delete-modal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete this book?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn green">YES</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn red">NO</a>
+      </div>
+    </div>
+
+    <!--create modal -->
+    <div id="create-modal" class="modal">
+      <div class="modal-content">
+        <h5>Add a book to the library</h5>
+
+        <div class="row">
+        <form class="col s12">
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="title" type="text" class="validate">
+              <label for="title">Title</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="author" type="text" class="validate">
+              <label for="author">Author</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="publisher" type="text" class="validate">
+              <label for="publisher">Publisher</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="pub-year" type="text" class="validate active">
+              <label for="pub-year">Publication Year</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="edition" type="number" class="validate">
+              <label for="edition">Edition</label>
+            </div>
+          </div>
+          <!--------------------------------------->
+          <div class="row">
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose the Category</option>
+                <option value="textbook">Textbook</option>
+                <option value="nonfiction">Non-fiction</option>
+                <option value="fiction">Fiction</option>
+              </select>
+              <label>Category</label>
+            </div>
+          </div>
+          <!----------------------------------------->
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="subcategory" type="text" class="validate">
+              <label for="subcategory">Sub-category</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="cover-path" type="text" class="validate active">
+              <label for="cover-path">Book cover path</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="description" class="materialize-textarea"></textarea>
+              <label for="description">Description</label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+      </script>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-light btn green">ADD</a>
+      </div>
+    </div>
+   <!--------------------------------------------->
+
+
+  </div>
+  <!------------------------------------------------->
+
+    <!--fixed action button-->
+    <div class="fixed-action-btn">
+      <a class="btn-floating tooltipped btn-large waves-effect green modal-trigger" data-target="create-modal" data-position="top" data-delay="50" data-tooltip="Add a new book">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Profile</title>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--jquery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/css/profile.css">
+
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav>
+      <div class="nav-wrapper teal">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">All books</a></li>
+        </ul>
+        <a class="right" href="admin.html">Admin Dashboard</a>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!--profile card-->
+      <h5>My Profile</h5>
+
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="images/generic-avatar.png">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h6>Name: Lorem Ipsum</h6>
+                <h6>Email: lorem@example.com</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <!--borrowed book cards-->
+      <h5>Books I am currrently borrowing</h5>
+
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-image activator">
+              <img src="images/covers/Ready-Player-One.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator">Ready Player One<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title">Borrowed:<i class="material-icons right">close</i></span>
+              <p>Feb 23 2018</p>
+              <a class="waves-effect waves-light btn">Return Book</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-image activator">
+              <img src="images/covers/american-gods.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator">American Gods<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title">Borrowed:<i class="material-icons right">close</i></span>
+              <p>Feb 24 2018</p>
+              <a class="waves-effect waves-light btn">Return Book</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-image activator">
+              <img src="/images/covers/hitchhikers.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator">Hitchhiker's Guide<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title">Borrowed:<i class="material-icons right">close</i></span>
+              <p>Feb 25 2018</p>
+              <a class="waves-effect waves-light btn">Return Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <!--borrowing history-->
+      <h5>All the books I have ever borrowed</h5>
+
+      <div class="row">
+    <div class="col s12 m9">
+      <div class="card-panel">
+        <table>
+          <thead>
+            <tr>
+                <th>Book</th> <th>Date Borrowed</th> <th>Date Returned</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>lorem ipsum</td> <td>mm/dd/yy</td> <td>mm/dd/yy</td>
+            </tr>
+            <tr>
+              <td>lorem ipsum</td> <td>mm/dd/yy</td> <td>mm/dd/yy</td>
+            </tr>
+            <tr>
+              <td>lorem ipsum</td> <td>mm/dd/yy</td> <td>mm/dd/yy</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>

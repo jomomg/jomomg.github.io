@@ -1,0 +1,13 @@
+
+.nav-wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.card-title {
+  font-size: 1.2em !important;
+}
+
+h5 {
+  font-weight: lighter;
+}
